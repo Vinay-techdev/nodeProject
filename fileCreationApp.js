@@ -13,9 +13,9 @@ const fileCreation = () => {
          rl.question("Enter the content: ", (content) => {
             fs.writeFile(`${fileName}.txt`, content, (err) => {
                 if(err) {
-                    console.error('Error writing the file: ', err.message);
+                    console.error(chalk.blue.bgGreen.bold('Error writing the file: ', err.message));
                 }else{
-                    console.log(chalk.blue.bgRed.bold(`\nFile ${fileName}.txt created sucessfully!`))
+                    console.log(chalk.blue.bgGreen.bold(`\nFile ${fileName}.txt created sucessfully!`))
                 }
                 rl.close();
             })
